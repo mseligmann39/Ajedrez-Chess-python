@@ -16,9 +16,12 @@ print(
 print("Escribe 'salir' para terminar el juego.")
 
 jaque_mate = False
+
+tablero_parcial = tablero_inicial.copy()
+
 while not jaque_mate:
-    tablero_parcial = tablero_inicial.copy()  # Copia del tablero actual para mostrar
-    imprimir_tablero(tablero_inicial)
+      # Copia del tablero actual para mostrar
+    imprimir_tablero(tablero_parcial)
     patron = r"^[a-h][1-8][a-h][1-8]$"
     print(f"Turno del jugador {turno_actual}. Introduce tu jugada:")
     movimiento_str = input("Introduce tu jugada (ej: e2e4) o escribe 'salir': ")
